@@ -1,0 +1,4 @@
+# MiniWallet .gitignore
+
+# 忽略 GoogleService-Info.plist
+MiniWallet/GoogleService-Info.plist
