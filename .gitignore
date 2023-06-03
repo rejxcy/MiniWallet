@@ -2,3 +2,6 @@
 
 # 忽略 GoogleService-Info.plist
 MiniWallet/GoogleService-Info.plist
+
+# 忽略 .xcuserstate文件
+UserInterfaceState.xcuserstate
