@@ -7,13 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var pocketTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        pocketTableView.dataSource = self
+        pocketTableView.delegate = self
 
+    }
+  
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = pocketTableView.dequeueReusableCell(withIdentifier: "WalletTableViewCell", for: indexPath) as! WalletTableViewCell
+        return cell
+    }
 
 }
 

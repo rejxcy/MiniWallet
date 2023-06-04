@@ -10,7 +10,8 @@
 		2E20F10E2A2AEA3F00B33E20 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F10D2A2AEA3F00B33E20 /* FirebaseAnalytics */; };
 		2E20F1102A2AEA3F00B33E20 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F10F2A2AEA3F00B33E20 /* FirebaseFirestore */; };
 		2E20F1122A2AEA3F00B33E20 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F1112A2AEA3F00B33E20 /* FirebaseFirestoreSwift */; };
-		2E20F1142A2AEB2B00B33E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E20F1132A2AEB2B00B33E20 /* GoogleService-Info.plist */; };
+		2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */; };
+		2E20F1282A2C885B00B33E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */; };
 		2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */; };
 		2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */; };
 		2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DC2A2A4F6C003636F1 /* ViewController.swift */; };
@@ -21,7 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E20F1132A2AEB2B00B33E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
+		2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E2328D52A2A4F6C003636F1 /* MiniWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +75,9 @@
 				2E2328E42A2A4F6C003636F1 /* Assets.xcassets */,
 				2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */,
 				2E2328E92A2A4F6C003636F1 /* Info.plist */,
-				2E20F1132A2AEB2B00B33E20 /* GoogleService-Info.plist */,
+				2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */,
 				2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */,
+				2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */,
 			);
 			path = MiniWallet;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */,
-				2E20F1142A2AEB2B00B33E20 /* GoogleService-Info.plist in Resources */,
+				2E20F1282A2C885B00B33E20 /* GoogleService-Info.plist in Resources */,
 				2E2328E52A2A4F6C003636F1 /* Assets.xcassets in Resources */,
 				2E2328E02A2A4F6C003636F1 /* Main.storyboard in Resources */,
 			);
@@ -163,6 +166,7 @@
 				2E2328E32A2A4F6C003636F1 /* MiniWallet.xcdatamodeld in Sources */,
 				2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */,
 				2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */,
+				2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
