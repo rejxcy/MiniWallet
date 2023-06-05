@@ -13,6 +13,8 @@
 		2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */; };
 		2E20F1282A2C885B00B33E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */; };
 		2E20F13C2A2CB4C000B33E20 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */; };
+		2E20F1452A2E1A1400B33E20 /* WalletItemCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */; };
+		2E20F1472A2E1A2F00B33E20 /* WalletItemOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */; };
 		2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */; };
 		2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */; };
 		2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DC2A2A4F6C003636F1 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
 		2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
+		2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItemCoreData.swift; sourceTree = "<group>"; };
+		2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItemOrder.swift; sourceTree = "<group>"; };
 		2E2328D52A2A4F6C003636F1 /* MiniWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,11 +58,21 @@
 		2E20F13D2A2CD37C00B33E20 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */,
+				2E20F1432A2E184C00B33E20 /* WalletCoreData */,
 				2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */,
 				2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		2E20F1432A2E184C00B33E20 /* WalletCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */,
+				2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */,
+				2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */,
+			);
+			path = WalletCoreData;
 			sourceTree = "<group>";
 		};
 		2E2328CC2A2A4F6C003636F1 = {
@@ -174,8 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */,
+				2E20F1452A2E1A1400B33E20 /* WalletItemCoreData.swift in Sources */,
 				2E20F13C2A2CB4C000B33E20 /* WalletItem.swift in Sources */,
 				2E2328E32A2A4F6C003636F1 /* MiniWallet.xcdatamodeld in Sources */,
+				2E20F1472A2E1A2F00B33E20 /* WalletItemOrder.swift in Sources */,
 				2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */,
 				2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */,
 				2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */,
