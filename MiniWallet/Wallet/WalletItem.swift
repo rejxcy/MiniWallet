@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-private let openHeight: CGFloat = 220
+private let openHeight: CGFloat = 160
 private let closeHeight: CGFloat = 60
 
 class WalletItem {

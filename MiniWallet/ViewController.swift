@@ -10,14 +10,11 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var pocketTableView: UITableView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var budgetLabel: UILabel!
-    @IBOutlet weak var costLabel: UILabel!
     
     
     
     var walletCellArr: [WalletItem] = [WalletItem(cardColor: UIColor.red, zPosition: 0),
-                                       WalletItem(cardColor: UIColor.blue, zPosition: 1),
+                                       WalletItem(cardColor: UIColor.systemTeal, zPosition: 1),
                                        WalletItem(cardColor: UIColor.green, zPosition: 2)]
     
     override func viewDidLoad() {
@@ -33,6 +30,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pocketTableView.dequeueReusableCell(withIdentifier: "WalletTableViewCell", for: indexPath) as! WalletTableViewCell
         cell.walletView.backgroundColor = walletCellArr[indexPath.item].cardColor
+        cell.layer.zPosition = walletCellArr[indexPath.item].zPosition
         return cell
     }
     
