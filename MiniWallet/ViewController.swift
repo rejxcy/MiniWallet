@@ -10,6 +10,11 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var pocketTableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    
+    
     
     var walletCellArr: [WalletItem] = [WalletItem(cardColor: UIColor.red, zPosition: 0),
                                        WalletItem(cardColor: UIColor.blue, zPosition: 1),
