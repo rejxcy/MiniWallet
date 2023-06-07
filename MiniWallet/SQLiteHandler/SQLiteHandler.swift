@@ -137,7 +137,7 @@ class SQLiteHandler {
                     walletId:    record[recordWalletId],
                     date:        record[recordDate],
                     name:        record[recordName],
-                    description: record[recordDescription],
+                    description: record[recordDescription] ?? "",
                     cost:        record[recordCost]
                 )
                 records.append(walletRecord)
