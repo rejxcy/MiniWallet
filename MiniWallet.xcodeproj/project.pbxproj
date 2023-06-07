@@ -7,35 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E20F10E2A2AEA3F00B33E20 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F10D2A2AEA3F00B33E20 /* FirebaseAnalytics */; };
-		2E20F1102A2AEA3F00B33E20 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F10F2A2AEA3F00B33E20 /* FirebaseFirestore */; };
-		2E20F1122A2AEA3F00B33E20 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2E20F1112A2AEA3F00B33E20 /* FirebaseFirestoreSwift */; };
 		2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */; };
-		2E20F1282A2C885B00B33E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */; };
 		2E20F13C2A2CB4C000B33E20 /* WalletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */; };
-		2E20F1452A2E1A1400B33E20 /* WalletItemCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */; };
-		2E20F1472A2E1A2F00B33E20 /* WalletItemOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */; };
 		2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */; };
 		2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */; };
 		2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328DC2A2A4F6C003636F1 /* ViewController.swift */; };
 		2E2328E02A2A4F6C003636F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328DE2A2A4F6C003636F1 /* Main.storyboard */; };
-		2E2328E32A2A4F6C003636F1 /* MiniWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */; };
 		2E2328E52A2A4F6C003636F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E42A2A4F6C003636F1 /* Assets.xcassets */; };
 		2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
-		2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItem.swift; sourceTree = "<group>"; };
-		2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItemCoreData.swift; sourceTree = "<group>"; };
-		2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletItemOrder.swift; sourceTree = "<group>"; };
 		2E2328D52A2A4F6C003636F1 /* MiniWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2E2328DC2A2A4F6C003636F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E2328DF2A2A4F6C003636F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2E2328E22A2A4F6C003636F1 /* MiniWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniWallet.xcdatamodel; sourceTree = "<group>"; };
 		2E2328E42A2A4F6C003636F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2328E72A2A4F6C003636F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E2328E92A2A4F6C003636F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,9 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E20F10E2A2AEA3F00B33E20 /* FirebaseAnalytics in Frameworks */,
-				2E20F1102A2AEA3F00B33E20 /* FirebaseFirestore in Frameworks */,
-				2E20F1122A2AEA3F00B33E20 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,21 +44,10 @@
 		2E20F13D2A2CD37C00B33E20 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				2E20F1432A2E184C00B33E20 /* WalletCoreData */,
 				2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */,
 				2E20F13B2A2CB4C000B33E20 /* WalletItem.swift */,
 			);
 			path = Wallet;
-			sourceTree = "<group>";
-		};
-		2E20F1432A2E184C00B33E20 /* WalletCoreData */ = {
-			isa = PBXGroup;
-			children = (
-				2E20F1442A2E1A1400B33E20 /* WalletItemCoreData.swift */,
-				2E20F1462A2E1A2F00B33E20 /* WalletItemOrder.swift */,
-				2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */,
-			);
-			path = WalletCoreData;
 			sourceTree = "<group>";
 		};
 		2E2328CC2A2A4F6C003636F1 = {
@@ -102,7 +77,6 @@
 				2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */,
 				2E2328E42A2A4F6C003636F1 /* Assets.xcassets */,
 				2E2328E92A2A4F6C003636F1 /* Info.plist */,
-				2E20F1272A2C885B00B33E20 /* GoogleService-Info.plist */,
 			);
 			path = MiniWallet;
 			sourceTree = "<group>";
@@ -124,9 +98,6 @@
 			);
 			name = MiniWallet;
 			packageProductDependencies = (
-				2E20F10D2A2AEA3F00B33E20 /* FirebaseAnalytics */,
-				2E20F10F2A2AEA3F00B33E20 /* FirebaseFirestore */,
-				2E20F1112A2AEA3F00B33E20 /* FirebaseFirestoreSwift */,
 			);
 			productName = MiniWallet;
 			productReference = 2E2328D52A2A4F6C003636F1 /* MiniWallet.app */;
@@ -157,7 +128,6 @@
 			);
 			mainGroup = 2E2328CC2A2A4F6C003636F1;
 			packageReferences = (
-				2E20F10C2A2AEA3F00B33E20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2E2328D62A2A4F6C003636F1 /* Products */;
 			projectDirPath = "";
@@ -174,7 +144,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */,
-				2E20F1282A2C885B00B33E20 /* GoogleService-Info.plist in Resources */,
 				2E2328E52A2A4F6C003636F1 /* Assets.xcassets in Resources */,
 				2E2328E02A2A4F6C003636F1 /* Main.storyboard in Resources */,
 			);
@@ -188,10 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */,
-				2E20F1452A2E1A1400B33E20 /* WalletItemCoreData.swift in Sources */,
 				2E20F13C2A2CB4C000B33E20 /* WalletItem.swift in Sources */,
-				2E2328E32A2A4F6C003636F1 /* MiniWallet.xcdatamodeld in Sources */,
-				2E20F1472A2E1A2F00B33E20 /* WalletItemOrder.swift in Sources */,
 				2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */,
 				2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */,
 				2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */,
@@ -416,48 +382,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2E20F10C2A2AEA3F00B33E20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2E20F10D2A2AEA3F00B33E20 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2E20F10C2A2AEA3F00B33E20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		2E20F10F2A2AEA3F00B33E20 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2E20F10C2A2AEA3F00B33E20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		2E20F1112A2AEA3F00B33E20 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2E20F10C2A2AEA3F00B33E20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		2E2328E12A2A4F6C003636F1 /* MiniWallet.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2E2328E22A2A4F6C003636F1 /* MiniWallet.xcdatamodel */,
-			);
-			currentVersion = 2E2328E22A2A4F6C003636F1 /* MiniWallet.xcdatamodel */;
-			path = MiniWallet.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2E2328CD2A2A4F6C003636F1 /* Project object */;
 }
