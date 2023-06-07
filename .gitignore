@@ -5,3 +5,6 @@ MiniWallet/GoogleService-Info.plist
 
 # 忽略 .xcuserstate文件
 UserInterfaceState.xcuserstate
+
+# Swift Package Manager
+Package.resolved
