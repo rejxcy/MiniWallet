@@ -15,6 +15,8 @@
 		2E2328E02A2A4F6C003636F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328DE2A2A4F6C003636F1 /* Main.storyboard */; };
 		2E2328E52A2A4F6C003636F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E42A2A4F6C003636F1 /* Assets.xcassets */; };
 		2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */; };
+		674E9C412A30519D00FD3DB4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 674E9C402A30519D00FD3DB4 /* SQLite */; };
+		674E9C432A30532100FD3DB4 /* SQLiteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		2E2328E42A2A4F6C003636F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2328E72A2A4F6C003636F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E2328E92A2A4F6C003636F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674E9C412A30519D00FD3DB4 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,16 +73,25 @@
 		2E2328D72A2A4F6C003636F1 /* MiniWallet */ = {
 			isa = PBXGroup;
 			children = (
+				674E9C3E2A30512400FD3DB4 /* SQLiteHandler */,
+				2E20F13D2A2CD37C00B33E20 /* Wallet */,
 				2E2328D82A2A4F6C003636F1 /* AppDelegate.swift */,
 				2E2328DA2A2A4F6C003636F1 /* SceneDelegate.swift */,
 				2E2328DC2A2A4F6C003636F1 /* ViewController.swift */,
-				2E20F13D2A2CD37C00B33E20 /* Wallet */,
 				2E2328DE2A2A4F6C003636F1 /* Main.storyboard */,
 				2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */,
 				2E2328E42A2A4F6C003636F1 /* Assets.xcassets */,
 				2E2328E92A2A4F6C003636F1 /* Info.plist */,
 			);
 			path = MiniWallet;
+			sourceTree = "<group>";
+		};
+		674E9C3E2A30512400FD3DB4 /* SQLiteHandler */ = {
+			isa = PBXGroup;
+			children = (
+				674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */,
+			);
+			path = SQLiteHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +111,7 @@
 			);
 			name = MiniWallet;
 			packageProductDependencies = (
+				674E9C402A30519D00FD3DB4 /* SQLite */,
 			);
 			productName = MiniWallet;
 			productReference = 2E2328D52A2A4F6C003636F1 /* MiniWallet.app */;
@@ -128,6 +142,7 @@
 			);
 			mainGroup = 2E2328CC2A2A4F6C003636F1;
 			packageReferences = (
+				674E9C3F2A30519D00FD3DB4 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 2E2328D62A2A4F6C003636F1 /* Products */;
 			projectDirPath = "";
@@ -158,6 +173,7 @@
 			files = (
 				2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */,
 				2E20F13C2A2CB4C000B33E20 /* WalletItem.swift in Sources */,
+				674E9C432A30532100FD3DB4 /* SQLiteHandler.swift in Sources */,
 				2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */,
 				2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */,
 				2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */,
@@ -236,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -290,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		674E9C3F2A30519D00FD3DB4 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		674E9C402A30519D00FD3DB4 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 674E9C3F2A30519D00FD3DB4 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E2328CD2A2A4F6C003636F1 /* Project object */;
 }
