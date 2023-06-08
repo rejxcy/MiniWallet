@@ -80,6 +80,8 @@ class SQLiteHandler {
         })
     }
     
+    
+// MARK: - Wallet
     func insertWallet(wallet: Wallet) {
         do {
             let insert = WalletTable.tableName.insert(
@@ -91,21 +93,6 @@ class SQLiteHandler {
             try db?.run(insert)
         } catch {
             print("Error inserting wallet: \(error)")
-        }
-    }
-    
-    func insertWalletRecord(walletRecord: WalletRecord) {
-        do {
-            let insert = RecordTable.tableName.insert(
-                RecordTable.walletId <- walletRecord.walletId,
-                RecordTable.date <- walletRecord.date,
-                RecordTable.name <- walletRecord.name,
-                RecordTable.description <- walletRecord.description,
-                RecordTable.cost <- walletRecord.cost
-            )
-            try db?.run(insert)
-        } catch {
-            print("Error inserting wallet record: \(error)")
         }
     }
     
@@ -129,6 +116,47 @@ class SQLiteHandler {
         return wallets
     }
     
+    func updateWalletInfo(wallet: Wallet) {
+        do {
+            let query = WalletTable.tableName.filter(WalletTable.id == wallet.id)
+            let update = query.update(
+                WalletTable.index <- wallet.index,
+                WalletTable.name <- wallet.name,
+                WalletTable.budget <- wallet.budget,
+                WalletTable.totalCost <- wallet.totalCost
+                )
+            try db?.run(update)
+        } catch {
+            print("Error with update wallet info: \(error)")
+        }
+    }
+    
+    func deleteWallet(walletId: Int64) {
+        do {
+            let query = WalletTable.tableName.filter(WalletTable.id == walletId)
+            try db?.run(query.delete())
+        } catch {
+            print("Error with delete wallet: \(error)")
+        }
+    }
+    
+    
+// MARK: - Wallet Record
+    func insertWalletRecord(walletRecord: WalletRecord) {
+        do {
+            let insert = RecordTable.tableName.insert(
+                RecordTable.walletId <- walletRecord.walletId,
+                RecordTable.date <- walletRecord.date,
+                RecordTable.name <- walletRecord.name,
+                RecordTable.description <- walletRecord.description,
+                RecordTable.cost <- walletRecord.cost
+            )
+            try db?.run(insert)
+        } catch {
+            print("Error inserting wallet record: \(error)")
+        }
+    }
+    
     func getWalletRecords(walletId: Int64) -> [WalletRecord] {
         var records: [WalletRecord] = []
         do {
@@ -150,5 +178,28 @@ class SQLiteHandler {
         return records
     }
     
+    func updateWalletRecord(walletRecord: WalletRecord) {
+        do {
+            let query = RecordTable.tableName.filter(RecordTable.id == walletRecord.id)
+            let update = query.update(
+                RecordTable.walletId <- walletRecord.walletId,
+                RecordTable.date <- walletRecord.date,
+                RecordTable.name <- walletRecord.name,
+                RecordTable.description <- walletRecord.description,
+                RecordTable.cost <- walletRecord.cost
+                )
+            try db?.run(update)
+        } catch {
+            print("Error with update wallet record: \(error)")
+        }
+    }
     
+    func deleteWalletRecord(recordID: Int64) {
+        do {
+            let query = WalletTable.tableName.filter(RecordTable.id == recordID)
+            try db?.run(query.delete())
+        } catch {
+            print("Error with delete wallet record: \(error)")
+        }
+    }
 }
