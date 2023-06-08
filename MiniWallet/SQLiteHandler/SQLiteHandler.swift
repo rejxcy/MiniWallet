@@ -28,22 +28,24 @@ class SQLiteHandler {
         return documentsPath.appendingPathComponent("wallet.db")
     }()
     
-    
-    private let walletTable = Table("wallet")
-    private let walletId = Expression<Int64>("id")
-    private let walletIndex = Expression<Int>("index")
-    private let walletName = Expression<String>("name")
-    private let walletBudget = Expression<Int>("budget")
-    private let walletTotalCost = Expression<Int>("totalCost")
-    
-    
-    private let recordTable = Table("wallet_record")
-    private let recordId = Expression<Int64>("id")
-    private let recordWalletId = Expression<Int64>("walletId")
-    private let recordDate = Expression<String>("date")
-    private let recordName = Expression<String>("name")
-    private let recordDescription = Expression<String?>("description")
-    private let recordCost = Expression<Int>("cost")
+    private enum WalletTable {
+        static let tableName = Table("wallet")
+        static let id = Expression<Int64>("id")
+        static let index = Expression<Int>("index")
+        static let name = Expression<String>("name")
+        static let budget = Expression<Int>("budget")
+        static let totalCost = Expression<Int>("totalCost")
+    }
+
+    private enum RecordTable {
+        static let tableName = Table("wallet_record")
+        static let id = Expression<Int64>("id")
+        static let walletId = Expression<Int64>("walletId")
+        static let date = Expression<String>("date")
+        static let name = Expression<String>("name")
+        static let description = Expression<String?>("description")
+        static let cost = Expression<Int>("cost")
+    }
     
     init() {
         do {
@@ -57,34 +59,34 @@ class SQLiteHandler {
     }
     
     private func createWalletTable() throws {
-        try db?.run(walletTable.create(ifNotExists: true) { table in
-            table.column(walletId, primaryKey: true)
-            table.column(walletIndex)
-            table.column(walletName)
-            table.column(walletBudget)
-            table.column(walletTotalCost)
+        try db?.run(WalletTable.tableName.create(ifNotExists: true) { table in
+            table.column(WalletTable.id, primaryKey: true)
+            table.column(WalletTable.index)
+            table.column(WalletTable.name)
+            table.column(WalletTable.budget)
+            table.column(WalletTable.totalCost)
         })
     }
     
     private func createWalletRecordTable() throws {
-        try db?.run(recordTable.create(ifNotExists: true) { table in
-            table.column(recordId, primaryKey: true)
-            table.column(recordWalletId)
-            table.column(recordDate)
-            table.column(recordName)
-            table.column(recordDescription)
-            table.column(recordCost)
-            table.foreignKey(recordWalletId, references: walletTable, walletId)
+        try db?.run(RecordTable.tableName.create(ifNotExists: true) { table in
+            table.column(RecordTable.id, primaryKey: true)
+            table.column(RecordTable.walletId)
+            table.column(RecordTable.date)
+            table.column(RecordTable.name)
+            table.column(RecordTable.description)
+            table.column(RecordTable.cost)
+            table.foreignKey(RecordTable.walletId, references: WalletTable.tableName, WalletTable.id)
         })
     }
     
     func insertWallet(wallet: Wallet) {
         do {
-            let insert = walletTable.insert(
-                walletIndex <- wallet.index,
-                walletName <- wallet.name,
-                walletBudget <- wallet.budget,
-                walletTotalCost <- wallet.totalCost
+            let insert = WalletTable.tableName.insert(
+                WalletTable.index <- wallet.index,
+                WalletTable.name <- wallet.name,
+                WalletTable.budget <- wallet.budget,
+                WalletTable.totalCost <- wallet.totalCost
             )
             try db?.run(insert)
         } catch {
@@ -94,12 +96,12 @@ class SQLiteHandler {
     
     func insertWalletRecord(walletRecord: WalletRecord) {
         do {
-            let insert = recordTable.insert(
-                recordWalletId <- walletRecord.walletId,
-                recordDate <- walletRecord.date,
-                recordName <- walletRecord.name,
-                recordDescription <- walletRecord.description,
-                recordCost <- walletRecord.cost
+            let insert = RecordTable.tableName.insert(
+                RecordTable.walletId <- walletRecord.walletId,
+                RecordTable.date <- walletRecord.date,
+                RecordTable.name <- walletRecord.name,
+                RecordTable.description <- walletRecord.description,
+                RecordTable.cost <- walletRecord.cost
             )
             try db?.run(insert)
         } catch {
@@ -110,14 +112,14 @@ class SQLiteHandler {
     func getWallets() -> [Wallet] {
         var wallets: [Wallet] = []
         do {
-            let query = walletTable
+            let query = WalletTable.tableName
             for wallet in try db!.prepare(query) {
                 let wallet = Wallet(
-                    id:        wallet[walletId],
-                    index:     wallet[walletIndex],
-                    name:      wallet[walletName],
-                    budget:    wallet[walletBudget],
-                    totalCost: wallet[walletTotalCost]
+                    id:        wallet[WalletTable.id],
+                    index:     wallet[WalletTable.index],
+                    name:      wallet[WalletTable.name],
+                    budget:    wallet[WalletTable.budget],
+                    totalCost: wallet[WalletTable.totalCost]
                 )
                 wallets.append(wallet)
             }
@@ -130,15 +132,15 @@ class SQLiteHandler {
     func getWalletRecords(walletId: Int64) -> [WalletRecord] {
         var records: [WalletRecord] = []
         do {
-            let query = recordTable.filter(recordWalletId == walletId)
+            let query = RecordTable.tableName.filter(RecordTable.walletId == walletId)
             for record in try db!.prepare(query) {
                 let walletRecord = WalletRecord(
-                    id:          record[recordId],
-                    walletId:    record[recordWalletId],
-                    date:        record[recordDate],
-                    name:        record[recordName],
-                    description: record[recordDescription] ?? "",
-                    cost:        record[recordCost]
+                    id:          record[RecordTable.id],
+                    walletId:    record[RecordTable.walletId],
+                    date:        record[RecordTable.date],
+                    name:        record[RecordTable.name],
+                    description: record[RecordTable.description] ?? "",
+                    cost:        record[RecordTable.cost]
                 )
                 records.append(walletRecord)
             }
