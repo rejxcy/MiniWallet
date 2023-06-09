@@ -196,7 +196,7 @@ class SQLiteHandler {
     
     func deleteWalletRecord(recordID: Int64) {
         do {
-            let query = WalletTable.tableName.filter(RecordTable.id == recordID)
+            let query = RecordTable.tableName.filter(RecordTable.id == recordID)
             try db?.run(query.delete())
         } catch {
             print("Error with delete wallet record: \(error)")
