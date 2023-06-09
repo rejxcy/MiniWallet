@@ -36,18 +36,18 @@ class SQLiteHandler {
         static let budget = Expression<Int>("budget")
         static let totalCost = Expression<Int>("totalCost")
     }
-
+    
     private enum RecordTable {
-        static let tableName = Table("wallet_record")
+        static let tableName = Table("walletRecord")
         static let id = Expression<Int64>("id")
         static let walletId = Expression<Int64>("walletId")
         static let date = Expression<String>("date")
         static let name = Expression<String>("name")
-        static let description = Expression<String?>("description")
+        static let description = Expression<String>("description")
         static let cost = Expression<Int>("cost")
     }
     
-    init() {
+    private init() {
         do {
             db = try Connection(path)
             
@@ -81,7 +81,7 @@ class SQLiteHandler {
     }
     
     
-// MARK: - Wallet
+    // MARK: - Wallet
     func insertWallet(wallet: Wallet) {
         do {
             let insert = WalletTable.tableName.insert(
@@ -124,7 +124,7 @@ class SQLiteHandler {
                 WalletTable.name <- wallet.name,
                 WalletTable.budget <- wallet.budget,
                 WalletTable.totalCost <- wallet.totalCost
-                )
+            )
             try db?.run(update)
         } catch {
             print("Error with update wallet info: \(error)")
@@ -141,7 +141,7 @@ class SQLiteHandler {
     }
     
     
-// MARK: - Wallet Record
+    // MARK: - Wallet Record
     func insertWalletRecord(walletRecord: WalletRecord) {
         do {
             let insert = RecordTable.tableName.insert(
@@ -167,7 +167,7 @@ class SQLiteHandler {
                     walletId:    record[RecordTable.walletId],
                     date:        record[RecordTable.date],
                     name:        record[RecordTable.name],
-                    description: record[RecordTable.description] ?? "",
+                    description: record[RecordTable.description],
                     cost:        record[RecordTable.cost]
                 )
                 records.append(walletRecord)
@@ -187,7 +187,7 @@ class SQLiteHandler {
                 RecordTable.name <- walletRecord.name,
                 RecordTable.description <- walletRecord.description,
                 RecordTable.cost <- walletRecord.cost
-                )
+            )
             try db?.run(update)
         } catch {
             print("Error with update wallet record: \(error)")
