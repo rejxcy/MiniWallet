@@ -17,7 +17,7 @@
 		2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */; };
 		674E9C412A30519D00FD3DB4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 674E9C402A30519D00FD3DB4 /* SQLite */; };
 		674E9C432A30532100FD3DB4 /* SQLiteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */; };
-		674E9C4B2A31BEEF00FD3DB4 /* MiniWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C4A2A31BEEF00FD3DB4 /* MiniWalletTests.swift */; };
+		674E9C4B2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C4A2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 		2E2328E92A2A4F6C003636F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteHandler.swift; sourceTree = "<group>"; };
 		674E9C482A31BEEF00FD3DB4 /* MiniWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		674E9C4A2A31BEEF00FD3DB4 /* MiniWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniWalletTests.swift; sourceTree = "<group>"; };
+		674E9C4A2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteHandlerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		674E9C492A31BEEF00FD3DB4 /* MiniWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				674E9C4A2A31BEEF00FD3DB4 /* MiniWalletTests.swift */,
+				674E9C4A2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift */,
 			);
 			path = MiniWalletTests;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				674E9C4B2A31BEEF00FD3DB4 /* MiniWalletTests.swift in Sources */,
+				674E9C4B2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
