@@ -26,5 +26,22 @@ class WalletItem {
         isOpen = false
         cellHeight = closeHeight
     }
+    
+    
+    func getRecords(wallet: Wallet) -> [WalletRecord] {
+        return SQLiteHandler.shared.getWalletRecords(walletId: wallet.id)
+    }
+    
+    func addRecord(record: WalletRecord) {
+        SQLiteHandler.shared.insertWalletRecord(walletRecord: record)
+    }
+    
+    func updateRecord(record: WalletRecord) {
+        SQLiteHandler.shared.updateWalletRecord(walletRecord: record)
+    }
+    
+    func deleteRecord(recordId: Int64) {
+        SQLiteHandler.shared.deleteWalletRecord(recordID: recordId)
+    }
 }
 
