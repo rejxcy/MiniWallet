@@ -11,40 +11,40 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var pocketTableView: UITableView!
     
-    
-    
-    var walletCellArr: [WalletItem] = [WalletItem(cardColor: UIColor.red, zPosition: 0),
-                                       WalletItem(cardColor: UIColor.systemTeal, zPosition: 1),
-                                       WalletItem(cardColor: UIColor.green, zPosition: 2)]
+    var walletCards = WalletManager.shared.getWalletCards()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pocketTableView.dataSource = self
         pocketTableView.delegate = self
     }
-  
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return walletCards.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pocketTableView.dequeueReusableCell(withIdentifier: "WalletTableViewCell", for: indexPath) as! WalletTableViewCell
-        cell.walletView.backgroundColor = walletCellArr[indexPath.item].cardColor
-        cell.layer.zPosition = walletCellArr[indexPath.item].zPosition
+        cell.nameLabel.text = walletCards[indexPath.item].walletInfo.name
+        cell.budgetLabel.text = String(walletCards[indexPath.item].walletInfo.budget)
+        cell.totalCost.text = String(walletCards[indexPath.item].walletInfo.totalCost)
+        cell.layer.zPosition = CGFloat(walletCards[indexPath.item].walletInfo.index)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.item == walletCellArr.count - 1 {
-            walletCellArr[indexPath.item].openCard()
+        if indexPath.item == walletCards.count - 1 {
+            walletCards[indexPath.item].openCard()
         }
-        return walletCellArr[indexPath.item].cellHeight
+        return walletCards[indexPath.item].cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let card = walletCellArr[indexPath.item]
-        if indexPath.item == walletCellArr.count - 1 { return }
+        let card = walletCards[indexPath.item]
+        
+        // TODO: if tapped the last, need add new one
+        if indexPath.item == walletCards.count - 1 { return }
         
         if card.isOpen {
             card.closeCard()
@@ -53,6 +53,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
         tableView.reloadData()
     }
-
+    
 }
 

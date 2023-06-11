@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,9 +84,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="budgetLabel" destination="ADI-zc-Lpj" id="3bI-eD-vSZ"/>
-                                            <outlet property="costLabel" destination="5hi-0l-Sr4" id="qOi-8l-G3q"/>
-                                            <outlet property="nameLabel" destination="TyJ-TI-qgQ" id="PC8-Oq-zPu"/>
+                                            <outlet property="budgetLabel" destination="ADI-zc-Lpj" id="2gG-7t-zjO"/>
+                                            <outlet property="nameLabel" destination="TyJ-TI-qgQ" id="lRb-KB-G8A"/>
+                                            <outlet property="totalCost" destination="5hi-0l-Sr4" id="X9d-Fz-kxJ"/>
                                             <outlet property="walletView" destination="eVB-52-Qtg" id="9KL-jV-rQS"/>
                                         </connections>
                                     </tableViewCell>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-460.30534351145036" y="1.4084507042253522"/>
+            <point key="canvasLocation" x="-708" y="-55"/>
         </scene>
     </scenes>
     <resources>

@@ -10,9 +10,9 @@ import UIKit
 class WalletTableViewCell: UITableViewCell {
 
     @IBOutlet weak var walletView: UIView!
-    @IBOutlet weak var nameLabel: UIView!
-    @IBOutlet weak var budgetLabel: UIView!
-    @IBOutlet weak var costLabel: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var totalCost: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
