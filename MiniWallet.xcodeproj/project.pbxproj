@@ -16,6 +16,7 @@
 		2E2328E02A2A4F6C003636F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328DE2A2A4F6C003636F1 /* Main.storyboard */; };
 		2E2328E52A2A4F6C003636F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E42A2A4F6C003636F1 /* Assets.xcassets */; };
 		2E2328E82A2A4F6C003636F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2328E62A2A4F6C003636F1 /* LaunchScreen.storyboard */; };
+		2EC273132A375809005116CF /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC273122A375809005116CF /* RecordViewController.swift */; };
 		674E9C412A30519D00FD3DB4 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 674E9C402A30519D00FD3DB4 /* SQLite */; };
 		674E9C432A30532100FD3DB4 /* SQLiteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */; };
 		674E9C4B2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E9C4A2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift */; };
@@ -43,6 +44,7 @@
 		2E2328E42A2A4F6C003636F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2328E72A2A4F6C003636F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E2328E92A2A4F6C003636F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EC273122A375809005116CF /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		674E9C422A30532100FD3DB4 /* SQLiteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteHandler.swift; sourceTree = "<group>"; };
 		674E9C482A31BEEF00FD3DB4 /* MiniWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		674E9C4A2A31BEEF00FD3DB4 /* SQLiteHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteHandlerTests.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				2E1DA39C2A341194003BDBCC /* WalletManager.swift */,
 				2E20F13B2A2CB4C000B33E20 /* WalletCard.swift */,
 				2E20F1232A2C870B00B33E20 /* WalletTableViewCell.swift */,
+				2EC273122A375809005116CF /* RecordViewController.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				2E2328DD2A2A4F6C003636F1 /* ViewController.swift in Sources */,
 				2E20F13C2A2CB4C000B33E20 /* WalletCard.swift in Sources */,
 				674E9C432A30532100FD3DB4 /* SQLiteHandler.swift in Sources */,
+				2EC273132A375809005116CF /* RecordViewController.swift in Sources */,
 				2E2328D92A2A4F6C003636F1 /* AppDelegate.swift in Sources */,
 				2E2328DB2A2A4F6C003636F1 /* SceneDelegate.swift in Sources */,
 				2E20F1252A2C870B00B33E20 /* WalletTableViewCell.swift in Sources */,
