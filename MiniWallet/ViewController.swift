@@ -11,7 +11,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var pocketTableView: UITableView!
     
-    var walletCards = WalletManager.shared.getWalletCards()
+    var walletCards = SQLiteHandler.shared.getWallets().map { WalletCard(wallet: $0) }
+    var selectWallet: Wallet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let cell = pocketTableView.dequeueReusableCell(withIdentifier: "WalletTableViewCell", for: indexPath) as! WalletTableViewCell
         cell.nameLabel.text = walletCards[indexPath.item].walletInfo.name
         cell.budgetLabel.text = String(walletCards[indexPath.item].walletInfo.budget)
-        cell.totalCost.text = String(walletCards[indexPath.item].walletInfo.totalCost)
+        cell.totalCostButton.titleLabel?.text = String(walletCards[indexPath.item].walletInfo.totalCost)
         cell.layer.zPosition = CGFloat(walletCards[indexPath.item].walletInfo.index)
         return cell
     }
@@ -43,16 +44,32 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let card = walletCards[indexPath.item]
         
+        var oldCard: WalletCard?
+        if let oldIndex = selectWallet?.index {
+            oldCard = walletCards[oldIndex]
+        }
+        
+        selectWallet = card.walletInfo
         // TODO: if tapped the last, need add new one
         if indexPath.item == walletCards.count - 1 { return }
         
         if card.isOpen {
             card.closeCard()
         } else {
+            oldCard?.closeCard()
             card.openCard()
         }
+        
         tableView.reloadData()
     }
+    
+    @IBSegueAction func totalCostSegueAction(_ coder: NSCoder) -> RecordViewController? {
+        let recordVC = RecordViewController(coder: coder)
+        recordVC?.wallet = selectWallet
+        return recordVC
+    }
+    
+    
     
 }
 
